@@ -13,8 +13,8 @@ file_path = "DSM_TQ0075_P_12757_20230109_20230315.tif"  # lidar
 # file_path = "20230215_SE2B_CGG_GBR_MS4_L3_BGRN.tif"  # sat
 lidar = gdal.Open(file_path)
 
-x_res = dataset.RasterXSize
-y_res = dataset.RasterYSize
+x_res = lidar.RasterXSize
+y_res = lidar.RasterYSize
 
 orig_img = cv2.imread("orig_img.jpg")
 orig_img = cv2.cvtColor(orig_img, cv2.COLOR_BGR2RGB)
