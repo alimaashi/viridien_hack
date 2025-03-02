@@ -1,8 +1,12 @@
-# viridien_hack
-Sharpening a low-res image with LIDAR data and applying ML model to predict land use types.
-Using dataset from Kaggle (https://www.kaggle.com/datasets/apollo2506/landuse-scene-classification) for land use classification ML training.
+# Viridien Hack: Enhancing Land Use Classification with LIDAR & ML
+## Project Overview
+We developed a solution to enhance low-resolution images using LIDAR data and applied a machine learning model to predict land use types. For training, we leveraged the Land Use Scene Classification dataset from Kaggle (source)[https://www.kaggle.com/datasets/apollo2506/landuse-scene-classification].
 
-*Findings on land use and likely impact of a third runway. **
-Our model found that there is significant residential area in the surroundings of Heathrow Airport. There are also some bodies of water, which might potentially impact construction in the area. The large green spaces might also prove contentious to build on, as there is an increasing concern of construction in green areas. On the right side of the image on the presentation, we can see that there are residential areas, and relocation of those people would be expensive to perform. 
+## Findings on Land Use & Impact of a Third Runway
+Our model found a significant presence of residential areas surrounding Heathrow Airport. Additionally, bodies of water nearby could make it hard to build on, and the many green spaces may spark environmental concerns. On the right side of the image in the presentation, we identified densely populated residential zones. The potential displacement of these communities would cause substantial costs and logistical challenges.
 
-Our solution for the upscaling is not memory intensive, but matching the data between LiDAR and performing the prioritisation for the queue was time intensive. nevertheless, it provided the best matching of colours, which ensured that the areas were similar to the original ones. For the Classifier, we used a 2GB dataset and ML model training using Tensorflow library which is memory and time intensive.
+## Solution & Methodology
+Our upscaling BFS approach is efficient in memory usage, ensuring a clean edge between buildings and the surroundings. However, aligning the LIDAR data and optimising the priority queue required time-intensive prioritisation. Despite this, our method kept a natural colour, preserving the integrity of the original picture.
+
+For classification, we processed a 2GB dataset and trained a machine learning model using TensorFlow. While this approach is computationally demanding, it delivered accurate land use predictions, which could be used for urban planning and infraestructure development
+
